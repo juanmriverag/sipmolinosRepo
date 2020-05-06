@@ -1,0 +1,412 @@
+<div fxLayout="column" fxFlex="100%" class="pcontent">
+    <div fxLayout="row" fxLayoutAlign="end start">
+        <div fxLayout="column" fxFlex="85%">
+            <mat-accordion class="headers-align">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Filtros
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Ingresar el filtro que desee para obtener información
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-tab-group>
+                        <mat-tab label="Filtro por material">
+                            <div fxLayout="row" class="mt5">
+                                <mat-form-field fxFlex="100%">
+                                    <mat-label>Material</mat-label>
+                                    <input matInput placeholder="referencia" value="Sushi">
+                                </mat-form-field>
+                            </div>
+
+                        </mat-tab>
+                        <mat-tab label="Filtro por grupo receta">
+                            <div fxLayout="row" fxLayoutAlign="space-between center" class="mt5">
+                                <mat-form-field fxFlex="49%">
+                                    <mat-label>Grupo Receta</mat-label>
+                                    <input matInput  value="Sushi">
+                                </mat-form-field>
+                                <mat-form-field fxFlex="49%">
+                                    <mat-label>Version</mat-label>
+                                    <input matInput value="Sushi">
+                                </mat-form-field>
+                            </div>
+                        </mat-tab>
+
+                    </mat-tab-group>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+        <div fxLayout="row" fxFlex="15%" fxLayoutAlign="space-around center">
+            <button mat-mini-fab matTooltip="Acciones" matTooltipClass="tooltipC" color="accent"
+                [matMenuTriggerFor]="beforeMenu">
+                <mat-icon>menu_open</mat-icon>
+            </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before" class="menuActions">
+                <button mat-menu-item>Recuperar <mat-icon>search</mat-icon></button>
+                <button mat-menu-item>Guardar <mat-icon>save</mat-icon></button>
+                <button mat-menu-item>Cancelar <mat-icon>clear</mat-icon></button>
+                <button mat-menu-item>Inactivar ruta <mat-icon>power_off</mat-icon></button>
+                <button mat-menu-item>Copiar modelo <mat-icon>file_copy</mat-icon></button>
+                <button mat-menu-item>Exportar <mat-icon>get_app</mat-icon></button>
+                <button mat-menu-item>Ver notifi<mat-icon>notification_important</mat-icon></button>
+                <button mat-menu-item>cerrar <mat-icon>exit_to_app</mat-icon></button>
+
+
+            </mat-menu>
+            <button mat-mini-fab color="accent" matTooltip="Lista de materiales" matTooltipClass="tooltipC">
+                <mat-icon>assignment</mat-icon>
+            </button>
+            <button mat-mini-fab color="accent" matTooltip="Control de cambios" matTooltipClass="tooltipC">
+                <mat-icon>track_changes</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div fxLayout="row" fxFlex="80%" fxLayoutAlign="space-between start" class="mtop js-pscroll">
+        <div fxLayout="column" fxFlex="100%">
+            <div fxLayout="row">
+                <mat-accordion class="headers-align w100">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Datos Básicos
+                            </mat-panel-title>
+                            <mat-panel-description>
+
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <mat-tab-group class="w100">
+                            <mat-tab label="Datos Básicos">
+                                <mat-grid-list cols="7" rowHeight="2:1" gutterSize="5px" gutterSize="5px">
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso Gta Cruda (gr)</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso Gta Horneada (gr)</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso Gta Roceada (gr)</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Gtas/Sanduche</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>UMB</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Base tiempo min</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso crema Gta</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso Sanduche (gr)</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Galletas/Paquetico</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Paqueticos/unidad</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Unidades/Corrugado</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Largo (mm)</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Ancho (mm)</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Calibre (mm)</mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                            </mat-tab>
+                            <mat-tab label="Rodillo y rendimiento">
+                                <mat-grid-list cols="5" rowHeight="3:1" gutterSize="5px">
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Ancho rodillo </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Perimetro rodillo </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>% Eficiencia </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>% Horneo </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>% Recorte </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile colspan="2">
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Galletas Por Rodillo </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>% Sobrepeso </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>% Enlace </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>% Rechazo </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                </mat-grid-list>
+                            </mat-tab>
+                            <mat-tab label="Pesos">
+                                <mat-grid-list cols="5" rowHeight="3:1" gutterSize="5px">
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso porción ind (gr) </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso Calculado UV (Kg) </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso N.Impreso UV (kg) </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso Costo Uni. Venta (gr) </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Centro </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso pasta cruda </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Peso pasta Horneada </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Uniddes x Turno </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Total operarios </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+                                    <mat-grid-tile>
+                                        <mat-form-field class="full-width">
+                                            <mat-label>Estado Ruta </mat-label>
+                                            <input matInput disabled value="0">
+                                        </mat-form-field>
+                                    </mat-grid-tile>
+
+                                </mat-grid-list>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+            <mat-divider></mat-divider>
+            <div fxLayout="row" class="mtop">
+                <mat-card class="w100">
+                    <mat-grid-list cols="11" rowHeight="2:1.5" gutterSize="5px">
+                        <mat-grid-tile colspan="2">
+                            <mat-form-field class="full-width">
+                                <mat-label>Recurso </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>Flujo maximo </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>Velocidad/minuto</mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>Otro</mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>2001 </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>2003 </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>2005</mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile rowspan="2">
+                            <button mat-raised-button color="primary">Insertar</button>
+
+                        </mat-grid-tile>
+                        <mat-grid-tile rowspan="2">
+                            <button mat-raised-button color="accent">Editar</button>
+
+                        </mat-grid-tile>
+                        <mat-grid-tile rowspan="2">
+                            <button mat-raised-button color="warn">Eliminar</button>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>Equipos/Recursos </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>Operarios/Recurso </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>UMB </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>Cantidad Base/Hora </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>2002 </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="full-width">
+                                <mat-label>2004 </mat-label>
+                                <input matInput disabled value="0">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-card>
+            </div>
+            <mat-divider></mat-divider>
+            <div fxLayout="row" class="mtop">
+                <table mat-table [dataSource]="data" class="T1 mat-elevation-z8 ">
+                    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                      <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                      <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                    </ng-container>
+              
+                    <tr mat-header-row *matHeaderRowDef="columnsToDisplay; sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+                  </table>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,204 @@
+<div fxLayout="column" fxFlex="100%" class="pcontent">
+  <div fxLayout="row" fxLayoutAlign="space-betweend start">
+    <div fxLayout="column" fxFlex="85%">
+      <mat-accordion class="headers-align">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Datos
+            </mat-panel-title>
+            <mat-panel-description>
+              Ingresar datos para obtener información
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div fxLayout="column" fxFlex="100%">
+            <div fxLayout="row" fxFlex="20%">
+
+              <div fxLayout="column" fxFlex="70%">
+                <div fxLayout="row" fxFlex="100%">
+                  <mat-form-field color="accent" class="wp60">
+                    <mat-label>Material</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field  class="wp220">
+                    <mat-label>Descripcion</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" class="wp60">
+                    <mat-label>Version</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" class="wp60">
+                    <mat-label>UMB</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" class="wp80">
+                    <mat-label>Version SAP</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+
+              </div>
+              <mat-divider [vertical]="true"></mat-divider>
+              <div fxLayout="column" fxFlex="25%">
+                <div fxLayout="row" fxFlex="100%">
+                  <section>
+                    <mat-checkbox class="check-margin" color="accent">Datos escalonamiento</mat-checkbox>
+                    <mat-checkbox class="check-margin" color="accent">N/A</mat-checkbox>
+                    <mat-checkbox class="check-margin" color="accent">GRIFFIN</mat-checkbox>
+                    <mat-checkbox class="check-margin" color="accent">Ideal</mat-checkbox>
+                  </section>
+
+                </div>
+              </div>
+
+            </div>
+            <mat-divider></mat-divider>
+            <div fxLayout="row" fxFlex="25%">
+              <div fxLayout="column" fxFlex="50%">
+                <div fxLayout="row" fxFlex="100%">
+                  <mat-radio-group class="radio-group" fxLayout="row wrap">
+                    <mat-radio-button fxFlex="25%" class="radio-margin" [value]="1">
+                      semi pastas
+                    </mat-radio-button>
+                    <mat-radio-button fxFlex="25%" class="radio-margin" [value]="2">
+                      semi cremas
+                    </mat-radio-button>
+                    <mat-radio-button fxFlex="25%" class="radio-margin" [value]="3">
+                      semi recogidas
+                    </mat-radio-button>
+                    <mat-radio-button fxFlex="25%" class="radio-margin" [value]="4">
+                      semi paqueticos
+                    </mat-radio-button>
+                    <mat-radio-button fxFlex="25%" class="radio-margin" [value]="5">
+                      Prod Terminado
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </div>
+              <mat-divider [vertical]="true"></mat-divider>
+              <div fxLayout="column" fxFlex="50%">
+                <div fxLayout="row" fxFlex="100%" fxLayoutAlign="space-around center" class="ml5">
+                  <mat-form-field color="accent" class="wp80">
+                    <mat-label>Marca</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" class="wp80">
+                    <mat-label>Tipo de galletas</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" class="wp80">
+                    <mat-label>Presentacion</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" class="wp80">
+                    <mat-label>Formato </mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" class="wp80">
+                    <mat-label>Tamaño</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+
+              </div>
+
+            </div>
+            <mat-divider></mat-divider>
+            <div fxLayout="row" fxFlex="55%">
+              <div fxLayout="column" fxFlex="25%">
+                <div fxLayout="row wrap" fxFlex="100%" fxLayoutAlign="space-evenly center" class="noformM">
+                  <mat-form-field color="accent" fxFlex="95%">
+                    <mat-label>Peso declarado (kg)</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" fxFlex="95%">
+                    <mat-label>costo venta uni (gr)</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+              </div>
+              <mat-divider [vertical]="true"></mat-divider>
+              <div fxLayout="column" fxFlex="25%">
+                <div fxLayout="row wrap" fxFlex="100%" fxLayoutAlign="space-around center" class="ml5 noformM">
+                  <mat-form-field color="accent" fxFlex="95%">
+                    <mat-label>protocolo x min</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" fxFlex="95%">
+                    <mat-label>mano factura</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" fxFlex="95%">
+                    <mat-label>unidades esperadas</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                </div>
+
+              </div>
+              <mat-divider [vertical]="true"></mat-divider>
+              <div fxLayout="column" fxFlex="50%">
+                <div fxLayout="row wrap" fxFlex="100%" fxLayoutAlign="space-between center" class="ml5 noformM">
+                  <mat-form-field color="accent" fxFlex="45%">
+                    <mat-label>Responsable</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" fxFlex="45%">
+                    <mat-label>descripcion</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" fxFlex="45%">
+                    <mat-label>Grupo planificador</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" fxFlex="45%">
+                    <mat-label>descripcion </mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field color="accent" fxFlex="45%">
+                    <mat-label>fasé</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <div fxLayout="row" fxFlex="15%" fxLayoutAlign="space-around center">
+      <button mat-mini-fab matTooltip="Acciones" matTooltipClass="tooltipC" color="accent"
+        [matMenuTriggerFor]="beforeMenu">
+        <mat-icon>menu_open</mat-icon>
+      </button>
+      <mat-menu #beforeMenu="matMenu" xPosition="before" class="menuActions">
+        <button mat-menu-item>Consultar material <mat-icon>search</mat-icon></button>
+        <button mat-menu-item>Insertar <mat-icon>add</mat-icon></button>
+        <button mat-menu-item>Guardar <mat-icon>save</mat-icon></button>
+        <button mat-menu-item>Actualizar Velocidades <mat-icon>update</mat-icon></button>
+        <button mat-menu-item>Eliminar <mat-icon>delete</mat-icon></button>
+        <button mat-menu-item>Cancelar <mat-icon>exit_to_app</mat-icon></button>
+
+      </mat-menu>
+      <button mat-mini-fab color="accent" matTooltip="Lista de materiales" matTooltipClass="tooltipC">
+        <mat-icon>assignment</mat-icon>
+      </button>
+      <button mat-mini-fab color="accent" matTooltip="Control de cambios" matTooltipClass="tooltipC">
+        <mat-icon>track_changes</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div fxLayout="row" fxFlex="80%" fxLayoutAlign="space-between start" class="mtop js-pscroll">
+    <table mat-table [dataSource]="data" class="T1 mat-elevation-z8 ">
+      <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+        <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+        <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,191 @@
+<div fxLayout="column" fxFlex="55%" class="cContent1 mr">
+    <div fxLayout="row" fxLayoutAlign="space-betweend start">
+        <div fxLayout="column" fxFlex="100%">
+            <mat-accordion class="headers-align">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Datos
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Ingresar datos para obtener información
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div fxLayout="column" fxFlex="100%">
+                        <div fxLayout="row" fxFlex="33%">
+                            <mat-form-field fxFlex="40%">
+                                <mat-label>Grupo planificación</mat-label>
+                                <mat-select>
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field fxFlex="20%">
+                                <mat-label>Responsable centro</mat-label>
+                                <input matInput value="">
+                            </mat-form-field>
+                            <mat-form-field fxFlex="40%">
+                                <mat-label>Recurso</mat-label>
+                                <mat-select>
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div fxLayout="row" fxFlex="33%" fxLayoutAlign="space-between center" class="mtop">
+                            <mat-form-field fxFlex="45%">
+                                <mat-label>Area</mat-label>
+                                <mat-select>
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field fxFlex="20%">
+                                <mat-label>Fecha</mat-label>
+                                <input matInput [matDatepicker]="picker1" [formControl]="date">
+                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                <mat-datepicker #picker1></mat-datepicker>
+                            </mat-form-field>
+                            <mat-form-field fxFlex="10%">
+                                <mat-label>Turno</mat-label>
+                                <mat-select>
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field fxFlex="20%">
+                                <mat-label>Descripción del turno</mat-label>
+                                <input matInput disabled value="">
+                            </mat-form-field>
+                            <button fxFlex="15%" mat-raised-button color="primary">Productividad</button>
+                        </div>
+                        <div fxLayout="row" fxFlex="33%" fxLayoutAlign="space-between center" class="mtop">
+                            <mat-form-field fxFlex="15%">
+                                <mat-label>Material</mat-label>
+                                <mat-select>
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field fxFlex="40%">
+                                <mat-label>Descripción del Material</mat-label>
+                                <input matInput disabled value="">
+                            </mat-form-field>
+                            <mat-form-field fxFlex="5%">
+                                <mat-label>Version </mat-label>
+                                <input matInput disabled value="">
+                            </mat-form-field>
+                            <mat-form-field fxFlex="12%">
+                                <mat-label>Grupo Receta</mat-label>
+                                <input matInput disabled value="">
+                            </mat-form-field>
+                            <mat-form-field fxFlex="12%">
+                                <mat-label>Id Reporte</mat-label>
+                                <input matInput disabled value="">
+                            </mat-form-field>
+                            <button fxFlex="15%" mat-raised-button color="primary">Produccion</button>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+    <div fxLayout="row" fxFlex="40%" fxLayoutAlign="space-between start" class="mtop js-pscroll ">
+        <table mat-table [dataSource]="t1" class="T1 mat-elevation-z8 ">
+            <ng-container [matColumnDef]="column" *ngFor="let column of t1Columns">
+                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="t1Columns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: t1Columns;"></tr>
+        </table>
+    </div>
+    <div fxLayout="row" fxFlex="40%" fxLayoutAlign="space-between start" class="mtop js-pscroll isRow">
+        <table mat-table [dataSource]="t2" class="T1 mat-elevation-z8 ">
+            <ng-container [matColumnDef]="column" *ngFor="let column of t2Columns">
+                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="t2Columns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: t2Columns;"></tr>
+        </table>
+        <table mat-table [dataSource]="t3" class="T1 mat-elevation-z8 ">
+            <ng-container [matColumnDef]="column" *ngFor="let column of t3Columns">
+                <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="t3Columns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: t3Columns;"></tr>
+        </table>
+    </div>
+</div>
+<div fxLayout="column" fxFlex="40%" class="cContent2">
+    <div fxLayout="row" fxLayoutAlign="space-betweend start">
+
+        <div fxLayout="row" fxFlex="95%" fxLayoutAlign="end center">
+            <button mat-mini-fab matTooltip="Acciones" matTooltipClass="tooltipC" color="accent"
+                [matMenuTriggerFor]="beforeMenu">
+                <mat-icon>menu_open</mat-icon>
+            </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before" class="menuActions">
+                <button mat-menu-item>Recuperar <mat-icon>search</mat-icon></button>
+                <button mat-menu-item>Guardar <mat-icon>save</mat-icon></button>
+
+                <button mat-menu-item>Insertar fila<mat-icon>playlist_add</mat-icon></button>
+                <button mat-menu-item>Eliminar fila<mat-icon>clear_all</mat-icon></button>
+
+                <button mat-menu-item>Exportar <mat-icon>get_app</mat-icon></button>
+                <button mat-menu-item>Eliminar movimientos<mat-icon>restore</mat-icon></button>
+
+
+                <button mat-menu-item>Cancelar <mat-icon>exit_to_app</mat-icon></button>
+
+            </mat-menu>
+
+        </div>
+    </div>
+    <div fxLayout="row" fxFlex="40%" fxLayoutAlign=" center">
+        <mat-tab-group class="w100">
+            <mat-tab label="OEE x Material">
+                <div echarts [options]="options" [theme]="'dark'" class="demo-chart"></div>
+            </mat-tab>
+            <mat-tab label="OEE x Receta">
+                <div echarts [options]="options" [theme]="'dark'" class="demo-chart"></div>
+            </mat-tab>
+        </mat-tab-group>
+
+
+    </div>
+    <div fxLayout="row" fxFlex="40%" fxLayoutAlign=" center" class="mtop2 js-pscroll">
+        <div fxLayout="column" >
+            <table mat-table [dataSource]="t4" class="T1 ">
+                <ng-container [matColumnDef]="column" *ngFor="let column of t4Columns">
+                    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="t4Columns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: t4Columns;"></tr>
+            </table>
+            <table mat-table [dataSource]="t5" class="T1 mtop">
+                <ng-container [matColumnDef]="column" *ngFor="let column of t5Columns">
+                    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="t5Columns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: t5Columns;"></tr>
+            </table>
+        </div>
+
+    </div>
+</div>

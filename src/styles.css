@@ -1,0 +1,108 @@
+:root {
+    --one-primary-color: #52c7b8;
+    --med-primary-color: #009688;
+    --high-primary-color : #00675b;
+    --one-secondary-color: #4F4F4F;
+    --med-secondary-color: #424242;
+    --high-secondary-color: #303030;
+    --one-tertiary-color: #eeff41;
+    --med-tertiary-color: #FF6859;
+    --font-med-primary-color : #84848A;
+    --font-one-secondary-color : #37efba;
+    --font-med-secondary-color : #1EB980;
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: var(--high-secondary-color);}
+
+
+
+app-admin-mats.ng-star-inserted, app-admin-tivas.ng-star-inserted, app-admin-tivas2.ng-star-inserted, app-in-movs.ng-star-inserted {
+    width: 100%;
+    height: 89vh;
+}
+
+.mat-toolbar.mat-toolbar-single-row{
+  height: 195%;
+  padding: 0.5% 5% 0 5%;
+  align-items: normal;
+}
+
+/* [ Scroll bar ] */
+.js-pscroll {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.tooltipC {
+  background: var(--med-primary-color);
+}
+
+.wp60{
+    width: 60px;
+}
+
+.wp80{
+    width: 80px;
+}
+
+.wp220{
+    width: 220px;
+}
+
+.w100, .full-width{
+  width: 100%;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.mt5{
+  margin-top: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+
+table.T1 tr th {
+    /* font-size: 15px; */
+    line-height: 1.4;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    /* background-color: var(--med-secondary-color);
+    color: var(--font-one-primary-color); */
+    cursor: default;
+    padding: 5px;
+  }
+  
+  .T1 tr.mat-row{
+    cursor: pointer;
+  }
+  
+  .T1 tr.mat-footer-row,.T1 tr.mat-row{
+    height: 30px;
+    /* font-size: 20px; */
+  }
+  .T1 tr.mat-header-row {
+    height: 40px;
+    /* font-size: 20px; */
+  }
+  .T1 tr th:first-child span {
+    margin-left: -10%;
+  }
+  
+  .menuActions button.mat-menu-item {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center space-between;
+    align-items: center;
+  }
+  .menuActions button.mat-menu-item .mat-icon {
+    margin-left: 15px;
+    margin-right: 0;
+  }

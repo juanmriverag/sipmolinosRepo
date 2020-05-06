@@ -1,0 +1,27 @@
+.cContent1 {
+    height: 100%;
+    margin: 1% 0% 1% 5%;
+  }
+.cContent2 {
+    height: 100%;
+    margin: 1% 5% 1% 0%;
+}
+
+.mtop{
+    margin-top: 1%;
+}
+.mtop2{
+  margin-top: 2%;
+}
+.mr{
+  margin-right: 1%;
+}
+
+.mat-form-field + .mat-form-field, .mat-form-field + button, .isRow .T1 + .T1 {
+  margin-left: 8px;
+}
+
+.demo-chart {
+    height: 200px !important;
+    width: 95%;
+  }
